@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+body {
+  background-color: #f5f6fa;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.card {
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.04);
+}
+
+.btn {
+  transition: all 0.15s ease;
+}
+
+.badge {
+  font-weight: 500;
+}

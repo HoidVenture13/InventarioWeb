@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">MiniInventario</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/home">
+      MiniInventario
+    </a>
+
     <button
       class="navbar-toggler"
       type="button"
@@ -12,16 +15,45 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a
+            class="nav-link"
+            routerLink="/home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            Inicio
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="listaDeCategoria">Categoria</a>
+          <a
+            class="nav-link"
+            routerLink="/listaDeCategoria"
+            routerLinkActive="active"
+          >
+            Categorías
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'categoriaForm'">Categoria Form</a>
+          <a
+            class="nav-link"
+            routerLink="/categoriaForm"
+            routerLinkActive="active"
+          >
+            Nueva Categoría
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/calculadora"
+            routerLinkActive="active"
+          >
+            Calculadora
+          </a>
         </li>
       </ul>
     </div>

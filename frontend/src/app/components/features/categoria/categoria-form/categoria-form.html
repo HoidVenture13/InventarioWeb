@@ -1,50 +1,78 @@
-<div class="mb-3"></div>
-<div class="container">
-  <div class="card border-success">
-    <div class="card border-success">
-      <div class="card-header text-primary text-center">
-        <h2 class="card-title">
-          {{tituloFormulario}}
-        </h2>
-      </div>
-      <div class="card-body text-primary">
-        <form>
-          <div class="mb-3">
-            <label for="nombreCategoria" class="form-label">Nombre de la categoria</label>
-            <input
-              type="text"
-              id="nombreCategoria"
-              name="nombreCategoria"
-              placeholder="Nombre de la categoria"
-              class="form-control"
-              maxlength="50"
-              [(ngModel)]="categoriaActual().nombreCategoria"
-              />
-          </div>
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-header bg-primary text-white text-center rounded-top-4 py-3">
+          <h4 class="mb-0">
+            <i class="me-2"></i>
+            {{ esEdicion() ? 'Editar' : 'Nueva' }} Categoría
+          </h4>
+        </div>
+        <div class="card-body p-4">
+          @if (cargando() && esEdicion()) {
+            <div class="text-center py-5">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+              </div>
+              <p class="mt-2 text-muted">Cargando categoría...</p>
+            </div>
+          } @else {
+            <form (ngSubmit)="onSubmit()" #categoriaForm="ngForm">
+              <!-- Nombre -->
+              <div class="mb-3">
+                <label for="nombreCategoria" class="form-label fw-semibold">Nombre</label>
+                <input
+                  type="text"
+                  id="nombreCategoria"
+                  name="nombreCategoria"
+                  class="form-control form-control-lg"
+                  placeholder="Ej: Electrónica"
+                  maxlength="50"
+                  required
+                  [ngModel]="categoriaActual().nombreCategoria"
+                  (ngModelChange)="actualizarNombre($event)"
+                />
+              </div>
 
-          <div class="mb-3">
-            <label for="descripcionCategoria" class="form-label">Descripcion de la categoria</label>
-            <input
-              type="text"
-              id="descripcionCategoria"
-              name="descripcionCategoria"
-              placeholder="Descripcion de la categoria"
-              class="form-control"
-              maxlength="100"
-              [(ngModel)]="categoriaActual().descripcionCategoria"
-              />
-          </div>
-          @if (categoriaActual().idCategoria != 0){
-          <div class="mb-3">
-            <button type="button" (click)="actualizarCategoria()" class="btn btn-outline-success form-control">Actualizar Categoria</button>
-          </div>
-        } @else {
-          <div class="mb-3">
-            <button type="button" (click)="registrarCategoria()" class="btn btn-outline-primary form-control">Registrar Categoria</button>
-          </div>
+              <!-- Descripción -->
+              <div class="mb-4">
+                <label for="descripcionCategoria" class="form-label fw-semibold">Descripción</label>
+                <textarea
+                  id="descripcionCategoria"
+                  name="descripcionCategoria"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Describe la categoría..."
+                  maxlength="100"
+                  required
+                  [ngModel]="categoriaActual().descripcionCategoria"
+                  (ngModelChange)="actualizarDescripcion($event)"
+                ></textarea>
+              </div>
 
-        }
-        </form>
+              <!-- Botones -->
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary btn-lg"
+                  [routerLink]="['/listaDeCategoria']"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+                  [disabled]="cargando()"
+                >
+                  @if (cargando()) {
+                    <span class="spinner-border spinner-border-sm me-2"></span>
+                  }
+                  {{ esEdicion() ? 'Actualizar' : 'Registrar' }}
+                </button>
+              </div>
+            </form>
+          }
+        </div>
       </div>
     </div>
   </div>

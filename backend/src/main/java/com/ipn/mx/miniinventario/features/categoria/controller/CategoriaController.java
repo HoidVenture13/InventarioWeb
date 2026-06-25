@@ -2,18 +2,22 @@ package com.ipn.mx.miniinventario.features.categoria.controller;
 
 import com.ipn.mx.miniinventario.core.entidades.Categoria;
 import com.ipn.mx.miniinventario.features.categoria.service.CategoriaService;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://proyecto-angular-clase2.vercel.app")
+@CrossOrigin(origins = { "https://proyecto-angular-clase2.vercel.app", "http://localhost:4200" })
 @RestController
 @RequestMapping("/api/v1/categorias")
 public class CategoriaController {
-    @Autowired
-    private CategoriaService categoriaService;
+
+    private final CategoriaService categoriaService;
+
+    public CategoriaController(CategoriaService categoriaService) {
+        this.categoriaService = categoriaService;
+    }
 
     @GetMapping("/categoria")
     @ResponseStatus(HttpStatus.OK)
@@ -23,28 +27,23 @@ public class CategoriaController {
 
     @GetMapping("/categoria/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Categoria findbyId(@PathVariable Long id){
+    public Categoria findById(@PathVariable Long id) {
         return categoriaService.findById(id);
     }
 
     @PostMapping("/categoria")
     @ResponseStatus(HttpStatus.CREATED)
-    public Categoria create (@RequestBody Categoria categoria){
+    public Categoria create(@Valid @RequestBody Categoria categoria) {
         return categoriaService.save(categoria);
     }
 
-    //Put es para actualizaciones completas, patch es para pariales
-    //ESTE ES UN UPDATE TOTALLLLLL
     @PutMapping("/categoria/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Categoria create (@RequestBody Categoria categoria,
-                             @PathVariable Long id) {
-        Categoria c = categoriaService.findById(id);
-        categoria.setIdCategoria(id);
-        c.setNombreCategoria(categoria.getNombreCategoria());
-        c.setDescripcionCategoria(categoria.getDescripcionCategoria());
-        c.setCreateAt(categoria.getCreateAt());
-        return categoriaService.save(categoria);
+    public Categoria update(@Valid @RequestBody Categoria categoria, @PathVariable Long id) {
+        Categoria existente = categoriaService.findById(id);
+        existente.setNombreCategoria(categoria.getNombreCategoria());
+        existente.setDescripcionCategoria(categoria.getDescripcionCategoria());
+        return categoriaService.save(existente);
     }
 
     @DeleteMapping("/categoria/{id}")

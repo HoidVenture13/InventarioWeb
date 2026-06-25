@@ -1,20 +1,7 @@
+<app-header></app-header>
 
-<div class="container">
-  <div class="card text-center text-primary">
-    <div class="card-header">
-      <app-header></app-header>
-    </div>
-    <div class="card-body text-success text-center">
+<main class="flex-grow-1">
+  <router-outlet />
+</main>
 
-
-
-      <router-outlet/>
-
-    </div>
-    <div class="card-footer text-danger text-center">
-      &copy; Derechos Reservados
-      <i>{{nombreAutor}}</i>
-    </div>
-  </div>
-</div>
-
+<app-footer></app-footer>

@@ -1,14 +1,61 @@
-<div class="mb-3"></div>
-<div class="container">
-  <div class="card border-primary text-center">
-    <div class="card-header">
-    </div>
-    <div class="card-body">
-      <img src="imagen.jpg"/>
-    </div>
-    <div class="card-footer">
-      <app-footer></app-footer>
-    </div>
-</div>
-</div>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-center">
+      <div class="mb-4">
+        <img
+          src="imagen.jpg"
+          alt="MiniInventario"
+          class="img-fluid rounded-4 shadow"
+          style="max-height: 320px; object-fit: cover; width: 100%;"
+        />
+      </div>
 
+      <h1 class="display-5 fw-bold text-primary mb-3">
+        MiniInventario
+      </h1>
+      <p class="lead text-muted mb-4">
+        Sistema de gestión de categorías de productos. CRUD completo con
+        Spring Boot y Angular 21.
+      </p>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a class="btn btn-primary btn-lg px-4" routerLink="/listaDeCategoria">
+          Ver Categorías
+        </a>
+        <a class="btn btn-outline-primary btn-lg px-4" routerLink="/categoriaForm">
+          Nueva Categoría
+        </a>
+      </div>
+
+      <div class="row mt-5 g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body text-center p-4">
+              <div class="display-6 mb-2">📋</div>
+              <h5 class="card-title">Listar</h5>
+              <p class="card-text text-muted small">Visualiza todas las categorías registradas en el sistema.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body text-center p-4">
+              <div class="display-6 mb-2">➕</div>
+              <h5 class="card-title">Crear</h5>
+              <p class="card-text text-muted small">Registra nuevas categorías de productos fácilmente.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body text-center p-4">
+              <div class="display-6 mb-2">✏️</div>
+              <h5 class="card-title">Editar</h5>
+              <p class="card-text text-muted small">Modifica el nombre y descripción de las categorías existentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
