@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="box1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="box2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="box3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" rx="16" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="80" r="60" fill="#bfdbfe" opacity="0.5"/>
+  <circle cx="700" cy="320" r="80" fill="#bfdbfe" opacity="0.4"/>
+  <circle cx="680" cy="80" r="40" fill="#93c5fd" opacity="0.3"/>
+
+  <!-- Clipboard -->
+  <g transform="translate(60, 100)">
+    <rect x="0" y="10" width="180" height="230" rx="12" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="0" y="10" width="180" height="50" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="85" y="0" width="30" height="25" rx="6" fill="#cbd5e1"/>
+    <!-- Lines on clipboard -->
+    <rect x="20" y="80" width="140" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="20" y="100" width="110" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="20" y="120" width="130" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="20" y="140" width="100" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="20" y="160" width="120" height="8" rx="4" fill="#e2e8f0"/>
+    <!-- Checkmark -->
+    <circle cx="155" cy="190" r="18" fill="#22c55e"/>
+    <path d="M147 190 l5 6 11-11" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Box 1 (large, front) -->
+  <g transform="translate(320, 160)">
+    <!-- Box front -->
+    <rect x="0" y="40" width="130" height="120" rx="8" fill="url(#box1)"/>
+    <rect x="0" y="40" width="130" height="120" rx="8" fill="white" opacity="0.12"/>
+    <!-- Box top -->
+    <path d="M0 40 L30 0 L160 0 L130 40 Z" fill="#60a5fa"/>
+    <!-- Box side -->
+    <path d="M130 40 L160 0 L160 120 L130 160 Z" fill="#1d4ed8"/>
+    <!-- Tape lines -->
+    <line x1="65" y1="40" x2="65" y2="160" stroke="white" stroke-width="3" opacity="0.4"/>
+    <line x1="0" y1="80" x2="130" y2="80" stroke="white" stroke-width="3" opacity="0.3"/>
+  </g>
+
+  <!-- Box 2 (small, behind and to the right) -->
+  <g transform="translate(500, 200)">
+    <rect x="0" y="30" width="100" height="90" rx="6" fill="url(#box2)"/>
+    <rect x="0" y="30" width="100" height="90" rx="6" fill="white" opacity="0.1"/>
+    <path d="M0 30 L25 0 L125 0 L100 30 Z" fill="#818cf8"/>
+    <path d="M100 30 L125 0 L125 90 L100 120 Z" fill="#3730a3"/>
+    <line x1="50" y1="30" x2="50" y2="120" stroke="white" stroke-width="2.5" opacity="0.35"/>
+    <line x1="0" y1="60" x2="100" y2="60" stroke="white" stroke-width="2.5" opacity="0.25"/>
+  </g>
+
+  <!-- Box 3 (accent, top right) -->
+  <g transform="translate(550, 90)">
+    <rect x="0" y="25" width="80" height="70" rx="5" fill="url(#box3)"/>
+    <rect x="0" y="25" width="80" height="70" rx="5" fill="white" opacity="0.1"/>
+    <path d="M0 25 L20 0 L100 0 L80 25 Z" fill="#a78bfa"/>
+    <path d="M80 25 L100 0 L100 70 L80 95 Z" fill="#5b21b6"/>
+    <line x1="40" y1="25" x2="40" y2="95" stroke="white" stroke-width="2" opacity="0.35"/>
+  </g>
+
+  <!-- Barcode/scan icon -->
+  <g transform="translate(290, 100)">
+    <rect x="0" y="0" width="45" height="40" rx="5" fill="white" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="8" y="8" width="4" height="24" rx="1" fill="#3b82f6"/>
+    <rect x="16" y="8" width="2" height="24" rx="1" fill="#3b82f6"/>
+    <rect x="22" y="8" width="5" height="24" rx="1" fill="#3b82f6"/>
+    <rect x="31" y="8" width="3" height="24" rx="1" fill="#3b82f6"/>
+  </g>
+
+  <!-- Decorative dots -->
+  <circle cx="430" cy="110" r="4" fill="#3b82f6" opacity="0.4"/>
+  <circle cx="445" cy="120" r="3" fill="#6366f1" opacity="0.3"/>
+  <circle cx="415" cy="125" r="2.5" fill="#8b5cf6" opacity="0.5"/>
+
+  <!-- Title text -->
+  <text x="400" y="350" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#1e3a5f">Sistema de Gestión de Inventario</text>
+  <text x="400" y="376" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#64748b">CRUD · Categorías · Productos</text>
+</svg>

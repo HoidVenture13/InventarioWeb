@@ -11,5 +11,5 @@ import { Footer } from './shared/footer/footer';
 })
 export class App {
   readonly titulo = 'MiniInventario';
-  readonly autor = 'César Arturo Bernal Linares';
+  readonly autor = 'De La Riva Martinez Hector Josue';
 }
