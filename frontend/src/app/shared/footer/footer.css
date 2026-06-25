@@ -1,4 +1,38 @@
 /* Footer */
+
 footer {
-  font-size: 0.875rem;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+  border-top: 1px solid rgba(34, 211, 238, 0.1);
+  padding: 1.25rem 0;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+footer::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.3), rgba(129, 140, 248, 0.3), transparent);
+  margin-bottom: 1.25rem;
+}
+
+.footer-author {
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.footer-separator {
+  color: #334155;
+  margin: 0 0.6rem;
+}
+
+.footer-ipn {
+  color: #818cf8;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-subtitle {
+  color: #475569;
+  font-size: 0.8rem;
 }

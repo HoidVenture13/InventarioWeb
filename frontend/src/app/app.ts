@@ -10,6 +10,6 @@ import { Footer } from './shared/footer/footer';
   styleUrl: './app.css',
 })
 export class App {
-  readonly titulo = 'MiniInventario';
-  readonly autor = 'De La Riva Martinez Hector Josue';
+  readonly titulo = 'Arellano Acosta Ixchel';
+  readonly autor = 'Arellano Acosta Ixchel';
 }

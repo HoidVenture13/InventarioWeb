@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" routerLink="/home">
-      MiniInventario
+    <a class="navbar-brand" routerLink="/home">
+      <span class="brand-text">Arellano Acosta Ixchel</span>
     </a>
 
     <button
@@ -19,39 +19,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/home"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             Inicio
           </a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/listaDeCategoria"
-            routerLinkActive="active"
-          >
-            Categorías
+          <a class="nav-link" routerLink="/listaDeCategoria" routerLinkActive="active">
+            Categorias
           </a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/categoriaForm"
-            routerLinkActive="active"
-          >
-            Nueva Categoría
+          <a class="nav-link" routerLink="/categoriaForm" routerLinkActive="active">
+            Nueva Categoria
           </a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/calculadora"
-            routerLinkActive="active"
-          >
+          <a class="nav-link" routerLink="/calculadora" routerLinkActive="active">
             Calculadora
           </a>
         </li>

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer.css',
 })
 export class Footer {
-  readonly autor = 'De La Riva Martinez Hector Josue';
+  readonly autor = 'Arellano Acosta Ixchel';
   readonly anio = new Date().getFullYear();
 }

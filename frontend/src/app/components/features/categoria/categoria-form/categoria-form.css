@@ -1,0 +1,39 @@
+/* Categoria Form */
+
+.form-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.form-card-header {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  background: rgba(34, 211, 238, 0.03);
+}
+
+.form-header-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+}
+
+.form-card-header h4 {
+  color: #e2e8f0;
+  font-weight: 700;
+  margin: 0;
+}
+
+.form-card-body {
+  padding: 2rem;
+}
