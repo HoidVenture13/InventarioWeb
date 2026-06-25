@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = { "https://proyecto-angular-clase2.vercel.app", "http://localhost:4200" })
+@CrossOrigin(origins = { "https://inventario-web-eight.vercel.app", "http://localhost:4200" })
 @RestController
 @RequestMapping("/api/v1/categorias")
 public class CategoriaController {
