@@ -15,7 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         .allowedOrigins(
-                                "https://proyecto-angular-clase2.vercel.app",
+                                "https://inventario-web-eight.vercel.app",
                                 "http://localhost:4200"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
